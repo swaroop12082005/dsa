@@ -1,12 +1,6 @@
 class Solution:
-    def isPalindrome(self, s): 
-
-        ans = []
-
-        for ch in s:
-            if ch.isalnum():
-                ans.append(ch.lower())
-
-        clean = "".join(ans)
-
-        return clean == clean[::-1]
+    def isPalindrome(self, s: str) -> bool:
+        check = "".join([char.lower() for char in s if char.isalnum()])
+    
+        return check == check[::-1]
+        
